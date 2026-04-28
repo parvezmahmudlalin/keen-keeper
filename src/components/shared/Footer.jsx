@@ -7,12 +7,12 @@ const Footer = () => {
     <footer className="bg-[#295943] text-white pt-16 pb-6">
       <div className="max-w-6xl mx-auto px-4 text-center">
         
-        {/* Title */}
+       
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           KeenKeeper
         </h1>
 
-        {/* Subtitle */}
+      
         <p className="text-sm md:text-base text-gray-200 max-w-2xl mx-auto mb-8">
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
         </p>
@@ -36,10 +36,10 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
+       
         <div className="border-t border-gray-400 opacity-40 my-6"></div>
 
-        {/* Bottom Section */}
+      
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-200">
           <p>© 2026 KeenKeeper. All rights reserved.</p>
 

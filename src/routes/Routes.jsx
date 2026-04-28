@@ -16,11 +16,7 @@ export const router = createBrowserRouter([
       {
         path: '/',
         Component:Home
-      },
-      {
-        path:'friends',
-        Component: Friends
-      },
+      },   
       {
         path:'/friendsDetails',
         Component: FriendDetails
