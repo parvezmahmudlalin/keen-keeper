@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "../layout/RootLayout";
 import Home from "../page/Home";
-import Friends from "../page/Friends";
-import FriendDetails from "../ui/FriendDetails";
+import FriendDetails from "../page/FriendDetails";
 import Timeline from "../page/Timeline";
 import Stats from "../page/Stats";
 import Error from "../components/error/Error";
@@ -18,8 +17,11 @@ export const router = createBrowserRouter([
         Component:Home
       },   
       {
-        path:'/friendsDetails',
-        Component: FriendDetails
+        path:'/friendsDetails/:id',
+        loader:() => fetch("/friends.json"),
+        Component: FriendDetails,
+        hydrateFallbackElement: <p>Loading...</p>
+        
       },
       {
         path: '/timeline',
