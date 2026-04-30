@@ -4,6 +4,7 @@ import { TbPhoneCall } from "react-icons/tb";
 import { useLoaderData, useParams } from "react-router";
 import { useContext } from "react";
 import { TimelineContext } from "../components/context/context";
+import { toast } from "react-toastify";
 
 const FriendDetails = () => {
   const data = useLoaderData();
@@ -21,8 +22,13 @@ const FriendDetails = () => {
     return <p className="p-4 text-error">Friend Not Found</p>;
   }
 
-  // ✅ Add Timeline Data Function
   const handleAddData = (type, userDetails) => {
+    const isExistFriend = timelineData.find((f) => f.friendId === userDetails.id && f.action === type);
+
+    if(isExistFriend) {
+      toast.error(`${type} already added in Timeline!`);
+      return
+    }
     const newData = {
       id: Date.now(),
       friendId: userDetails.id,
@@ -33,6 +39,7 @@ const FriendDetails = () => {
     };
 
     setTimelineData([...timelineData, newData]);
+    toast.success(`${type} added successfully in Timeline!`)
   };
 
   return (
