@@ -8,7 +8,7 @@ import { TimelineContext } from '../context/context';
 
 
 const Navbar = () => {
-  const {timelineData} = useContext(TimelineContext)
+  const {timelineData = []} = useContext(TimelineContext)
   return (
 
 
@@ -38,7 +38,11 @@ const Navbar = () => {
               className="menu menu-sm gap-1.5 dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/timeline">Timeline</Link></li>
+              <li><Link to="/timeline">Timeline   {timelineData.length > 0 && (
+               <span className=" ml-1">
+                 {timelineData.length}
+               </span>
+                )}</Link></li>
               <li><Link to="/stats">Stats</Link></li>
             </ul>
           </div>
@@ -60,7 +64,11 @@ const Navbar = () => {
                 to="/timeline"
                 className="btn btn-ghost flex items-center gap-1"
               >
-                <RiTimeLine /> Timeline
+                <RiTimeLine /> Timeline {timelineData.length > 0 && (
+               <span className="  ml-1">
+                {timelineData.length}
+               </span>
+               )}
               </NavLink>
             </li>
 
