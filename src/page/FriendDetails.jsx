@@ -185,25 +185,25 @@ const FriendDetails = () => {
                 
                 <button
                   onClick={() => handleAddData("Call", info)}
-                  className="btn bg-base-200 hover:bg-base-300 flex flex-col items-center justify-center gap-3 h-24 text-lg font-semibold"
+                  className="btn bg-base-200 hover:bg-base-300 flex flex-col items-center justify-center gap-3 h-24  font-semibold"
                 >
-                  <TbPhoneCall className="text-4xl" />
+                  <TbPhoneCall className="text-2xl" />
                   <span>Call</span>
                 </button>
 
                 <button
                   onClick={() => handleAddData("Text", info)}
-                  className="btn bg-base-200 hover:bg-base-300 flex flex-col items-center justify-center gap-3 h-24 text-lg font-semibold"
+                  className="btn bg-base-200 hover:bg-base-300 flex flex-col items-center justify-center gap-3 h-24  font-semibold"
                 >
-                  <PiChatTeardropTextFill className="text-4xl" />
+                  <PiChatTeardropTextFill className="text-2xl" />
                   <span>Text</span>
                 </button>
 
                 <button
                   onClick={() => handleAddData("Video", info)}
-                  className="btn bg-base-200 hover:bg-base-300 flex flex-col items-center justify-center gap-3 h-24 text-lg font-semibold"
+                  className="btn bg-base-200 hover:bg-base-300 flex flex-col items-center justify-center gap-3 h-24 text font-semibold"
                 >
-                  <BiVideo className="text-4xl" />
+                  <BiVideo className="text-2xl" />
                   <span>Video</span>
                 </button>
 

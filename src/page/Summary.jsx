@@ -1,4 +1,5 @@
-import { use } from "react";
+import { use, useContext } from "react";
+import { TimelineContext } from "../components/context/context";
 
 
 
@@ -8,6 +9,8 @@ const Summary = ({fetchFriends}) => {
    const needAttention = summary.filter(f => 
     f.status === "overdue" || f.status === "almost due"
   ).length;
+   const { timelineData } = useContext(TimelineContext);
+
   return (
     <div className="bg-base-200 py-20">
       <div className="container mx-auto text-center">
@@ -48,7 +51,7 @@ const Summary = ({fetchFriends}) => {
           </div>
 
           <div className="bg-base-100 p-8 rounded-xl shadow text-center">
-            <h2 className="text-3xl font-bold text-green-800">12</h2>
+            <h2 className="text-3xl font-bold text-green-800">{timelineData.length}</h2>
             <p className="text-gray-500 mt-2">Interactions This Month</p>
           </div>
 

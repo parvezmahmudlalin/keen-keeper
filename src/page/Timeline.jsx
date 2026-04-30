@@ -15,7 +15,7 @@ const Timeline = () => {
     if (action === "Call") return <TbPhoneCall className="text-xl" />;
     if (action === "Text") return <PiChatTeardropTextFill className="text-xl" />;
     if (action === "Video") return <BiVideo className="text-xl" />;
-    return "🤝";
+    return "";
   };
 
   const filteredData =
