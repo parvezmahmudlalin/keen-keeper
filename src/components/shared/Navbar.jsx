@@ -3,29 +3,13 @@ import logoImg from '../../assets/images/logo.png'
 import { TfiStatsUp } from 'react-icons/tfi';
 import { RiTimeLine } from 'react-icons/ri';
 import { Link, NavLink } from 'react-router';
+import { useContext } from 'react';
+import { TimelineContext } from '../context/context';
 
 
 const Navbar = () => {
+  const {timelineData} = useContext(TimelineContext)
   return (
-//     <div className="navbar bg-base-100 shadow-sm">
-//   <div className="container mx-auto">
-//     <div className='flex justify-between'>
-//       <img src={logoImg} alt="logo" />
-//     <ul className="flex justify-around gap-4 text-[#64748B]">
-//      <NavLink to={"/"} className= 'btn btn-ghost flex justify-center items-center gap-1'><AiOutlineHome />Home</NavLink>
-//       <NavLink to={"/timeline"} className= 'btn btn-ghost flex justify-center items-center gap-1'><RiTimeLine />Timeline</NavLink>
-//       <NavLink to={"/stats"} className= 'btn btn-ghost flex justify-center items-center gap-1'><TfiStatsUp />
-// Stats</NavLink>
-//     </ul>
-
-//     </div>
-  
-//   </div>
-// </div>
-
-
-
-
 
 
 <div className="navbar bg-base-100 shadow-sm">

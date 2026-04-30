@@ -4,10 +4,13 @@ import './index.css'
 
 import { RouterProvider } from 'react-router/dom'
 import { router } from './routes/Routes'
+import TimelineContextProvider from './components/context/TimelineContextProvider'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router}/>
+   <TimelineContextProvider>
+    <RouterProvider router={router}/>
+   </TimelineContextProvider>
   </StrictMode>,
 )
