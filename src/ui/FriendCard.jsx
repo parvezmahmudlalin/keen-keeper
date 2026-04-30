@@ -22,22 +22,27 @@ const FriendCard = ({friend}) => {
           {friend.days_since_contact}d ago
         </p>
 
-        {/* Tags section grows but keeps layout balanced */}
+       
         <div className="mt-4 flex flex-col items-center gap-2 flex-1">
+          <div className=" flex flex-wrap items-center gap-2 ">
           {friend.tags?.map((tag, index) => (
             <span
               key={index}
-              className="px-4 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700"
+              className="px-4 py-1 text-xs font-medium rounded-full bg-green-100 text-green-700 "
             >
-              {tag}
+              {tag  }
             </span>
           ))}
 
-          {friend.status === "overdue" && (
-            <span className="px-4 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-700">
-              Almost Due
-            </span>
-          )}
+        
+        </div>
+         {friend.status === "overdue" ? <span className="px-4 py-1 text-xs font-medium rounded-full bg-red-100 text-red-700"> 
+             Overdue
+            </span> : friend.status === "almost due" ? <span className="px-4 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-700"> 
+             Almost Due
+            </span> : friend.status === "on-track" ? <span className="px-4 py-1 text-xs font-medium rounded-full bg-green-400 text-green-700"> 
+             On-Track
+            </span> : ""  }
         </div>
       </div>
     </Link>
