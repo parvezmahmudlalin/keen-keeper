@@ -11,8 +11,8 @@ const Stats = () => {
   const video = timelineData.filter(item => item.action === "Video").length;
 console.log(timelineData)
   const data = [
-    { name: "Call", value: call },
-    { name: "Text", value: message },
+    { name: "Call", value: call , fill: "green"},
+    { name: "Text", value: message, fill:"purple" },
     { name: "Video", value: video },
   ];
   console.log(data)
