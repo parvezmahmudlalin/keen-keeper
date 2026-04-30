@@ -1,6 +1,13 @@
+import { use } from "react";
 
 
-const Summary = () => {
+
+const Summary = ({fetchFriends}) => {
+  const summary = use(fetchFriends)
+   const onTrack = summary.filter(f => f.status === "on-track").length;
+   const needAttention = summary.filter(f => 
+    f.status === "overdue" || f.status === "almost due"
+  ).length;
   return (
     <div className="bg-base-200 py-20">
       <div className="container mx-auto text-center">
@@ -26,17 +33,17 @@ const Summary = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
 
           <div className="bg-base-100 p-8 rounded-xl shadow text-center">
-            <h2 className="text-3xl font-bold text-green-800">10</h2>
+            <h2 className="text-3xl font-bold text-green-800">{summary.length}</h2>
             <p className="text-gray-500 mt-2">Total Friends</p>
           </div>
 
           <div className="bg-base-100 p-8 rounded-xl shadow text-center">
-            <h2 className="text-3xl font-bold text-green-800">3</h2>
+            <h2 className="text-3xl font-bold text-green-800">{onTrack}</h2>
             <p className="text-gray-500 mt-2">On Track</p>
           </div>
 
           <div className="bg-base-100 p-8 rounded-xl shadow text-center">
-            <h2 className="text-3xl font-bold text-green-800">6</h2>
+            <h2 className="text-3xl font-bold text-green-800">{needAttention}</h2>
             <p className="text-gray-500 mt-2">Need Attention</p>
           </div>
 

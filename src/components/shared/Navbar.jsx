@@ -8,7 +8,7 @@ import { TimelineContext } from '../context/context';
 
 
 const Navbar = () => {
-  const {timelineData = []} = useContext(TimelineContext)
+  const {timelineData } = useContext(TimelineContext)
   return (
 
 

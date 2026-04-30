@@ -8,7 +8,7 @@ const Home = () => {
  
   return (
     <div>
-     <Summary/>
+     <Summary fetchFriends = {fetchFriends}/>
      <Suspense fallback = {<h1>Loading.....</h1>}>
        <Friends fetchFriends = {fetchFriends}/>
      </Suspense>

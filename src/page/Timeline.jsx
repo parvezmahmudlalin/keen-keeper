@@ -29,7 +29,7 @@ const Timeline = () => {
 
         <h1 className="text-3xl font-bold mb-6">Timeline</h1>
 
-        {/* Filter */}
+  
         <select
           className="select select-bordered mb-8 "
           value={filter}
