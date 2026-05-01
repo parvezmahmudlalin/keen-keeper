@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Friends from "./Friends";
 import Summary from "./Summary";
 
-const fetchFriends = fetch('/public/friends.json').then(res => res.json())
+const fetchFriends = fetch('/friends.json').then(res => res.json())
 const Home = () => {
   
  
