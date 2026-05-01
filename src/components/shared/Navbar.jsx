@@ -53,7 +53,11 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/"
-                className="btn btn-ghost flex items-center gap-1"
+                className={({ isActive }) =>
+      `btn btn-ghost flex items-center gap-1 ${
+        isActive ? "text-purple-500 border-b border-purple-500" : ""
+      }`
+    }
               >
                 <AiOutlineHome /> Home
               </NavLink>
@@ -62,7 +66,11 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/timeline"
-                className="btn btn-ghost flex items-center gap-1"
+                className={({ isActive }) =>
+      `btn btn-ghost flex items-center gap-1 ${
+        isActive ? "text-purple-500 border-b border-purple-500" : ""
+      }`
+    }
               >
                 <RiTimeLine /> Timeline {timelineData.length > 0 && (
                <span className="  ml-1">
@@ -75,7 +83,11 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/stats"
-                className="btn btn-ghost flex items-center gap-1"
+                className={({ isActive }) =>
+      `btn btn-ghost flex items-center gap-1 ${
+        isActive ? "text-purple-500 border-b border-purple-500" : ""
+      }`
+    }
               >
                 <TfiStatsUp /> Stats
               </NavLink>
