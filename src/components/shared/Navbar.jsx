@@ -53,9 +53,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/"
-                className={({ isActive }) =>
+                 className={({ isActive }) =>
       `btn btn-ghost flex items-center gap-1 ${
-        isActive ? "text-purple-500 border-b border-purple-500" : ""
+        isActive ? "text-white border-b bg-[#244D3F]" : ""
       }`
     }
               >
@@ -66,9 +66,9 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/timeline"
-                className={({ isActive }) =>
+                 className={({ isActive }) =>
       `btn btn-ghost flex items-center gap-1 ${
-        isActive ? "text-purple-500 border-b border-purple-500" : ""
+        isActive ? "text-white border-b bg-[#244D3F]" : ""
       }`
     }
               >
@@ -85,7 +85,7 @@ const Navbar = () => {
                 to="/stats"
                 className={({ isActive }) =>
       `btn btn-ghost flex items-center gap-1 ${
-        isActive ? "text-purple-500 border-b border-purple-500" : ""
+        isActive ? "text-white border-b bg-[#244D3F]" : ""
       }`
     }
               >
