@@ -20,7 +20,7 @@ export const router = createBrowserRouter([
         path:'/friendsDetails/:id',
         loader:() => fetch("/friends.json"),
         Component: FriendDetails,
-        hydrateFallbackElement: <p>Loading...</p>
+        hydrateFallbackElement: <span className="loading loading-bars loading-xs"></span>
         
       },
       {
