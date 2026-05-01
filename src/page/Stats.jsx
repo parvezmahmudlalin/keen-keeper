@@ -18,9 +18,12 @@ console.log(timelineData)
   console.log(data)
 
   return (
-       <div className=" my-10 shadow p-10 rounded-md border border-slate-300 container mx-auto">
-      <h2 className="font-semibold text-3xl mb-16 text-center">
-        Installed and uninstalled apps
+
+     <div className="container mx-auto">
+        <h1 className="font-bold text-5xl mt-5">Friendship Analytics</h1>
+        <div className=" my-10 shadow p-10 rounded-md border border-slate-300 container mx-auto">
+      <h2 className="font-semibold text-[#244D3F] mb-16 ">
+       By Interaction Type
       </h2>
       <PieChart
         style={{
@@ -48,6 +51,7 @@ console.log(timelineData)
         <Tooltip />
       </PieChart>
     </div>
+     </div>
   );
 };
 
